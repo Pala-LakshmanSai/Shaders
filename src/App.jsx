@@ -34,7 +34,7 @@ function App() {
     const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial);
     // scene.add(cubeMesh);
 
-    const icoGeometry = new THREE.SphereGeometry(2, 40, 40)
+    const icoGeometry = new THREE.PlaneGeometry(1,1)
     const icoMaterial = new THREE.ShaderMaterial({fragmentShader: fragmentShader, vertexShader: vertexShader})
     const icoMesh = new THREE.Mesh(icoGeometry, icoMaterial);
     scene.add(icoMesh)
@@ -42,8 +42,8 @@ function App() {
     icoMaterial.uniforms.uTime = {value: 0}
     icoMaterial.uniforms.uRadius = {value: 0.2}
     console.log(icoMaterial.uniforms)
-    const axisHelper = new THREE.AxesHelper(20);
-    scene.add(axisHelper);
+    // const axisHelper = new THREE.AxesHelper(20);
+    // scene.add(axisHelper);
 
 
     const ambientLight = new THREE.AmbientLight("white", 1);
